@@ -3,124 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clases de desarrollo web para niños y niñas desde los 10 años. Aprende a crear sitios web, apps y juegos con acompañamiento en vivo.">
+  <meta name="keywords" content="clases para niños, programación, desarrollo web infantil, HTML CSS JavaScript, cursos en vivo">
+  <meta name="author" content="Frederick Corredor" />
   <title>Clases de Desarrollo Web para Niños</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(287deg, #1f1e57, #531637);
       color: white;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    header, section {
-      padding: 40px 20px;
+
+    header {
+      text-align: center;
+      backdrop-filter: blur(10px);
+      background-image: url(fondobanner1.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 50vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(2px 4px 6px black);
+      padding: 20px;
+    }
+
+    section {
       max-width: 900px;
       margin: auto;
+      padding: 40px 20px;
     }
+
     h1, h2 {
       text-align: center;
+      width: 100%;
     }
+
+
     .beneficios, .etapas {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .caja {
       background-color: rgba(255,255,255,0.07);
       padding: 20px;
       border-radius: 12px;
       flex: 1 1 260px;
       backdrop-filter: blur(4px);
+      text-align: center;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     }
+
+    .caja:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.342);
+
+    }
+
     .cta {
       text-align: center;
       margin-top: 40px;
     }
+
     .cta a {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 28px;
       background-color: #25d366;
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 1.2rem;
-      transition: background 0.3s;
+      font-size: 1.3rem;
+      transition: background 0.3s ease;
     }
+
     .cta a:hover {
       background-color: #1ebe5d;
+    }
+
+   .etapas .caja {
+  transform: translate(200px, -50px);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 0.2s ease-out, opacity 1.7s ease-out;
+  
+}
+
+.etapas{
+  padding-top: 30px;
+}
+
+
+    @media (max-width: 600px) {
+      .caja {
+        flex: 1 1 100%;
+      }
+
+      .cta a {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header data-aos="fade-down">
-    <h1>Potencia las habilidades de tus hijos</h1>
-    <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:auto;">
-      Clases de desarrollo web personalizadas para niños y niñas desde los 10 años. Aprende creando sitios, juegos y apps.
-    </p>
+    <div>
+      <h1>Convierte su creatividad en habilidades digitales</h1>
+      <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:auto;">
+        Clases en vivo para niños desde los 10 años donde aprenden a crear sitios web, juegos y apps reales.
+      </p>
+    </div>
   </header>
 
-  <section data-aos="fade-up">
-    <h2>Beneficios del programa</h2>
-    <div class="beneficios">
-      <div class="caja">Desarrolla habilidades técnicas desde temprana edad</div>
-      <div class="caja">Expresa sus ideas de forma visual y funcional</div>
-      <div class="caja">Resuelve problemas de forma lógica y estructurada</div>
-      <div class="caja">Aumenta la concentración y atención al detalle</div>
-      <div class="caja">Aborda problemas complejos con orden y claridad</div>
-    </div>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>¿Quién imparte las clases?</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Hola, soy <strong>Frederick Corredor</strong>, desarrollador web FrontEnd y creador del programa "Desarrollo Web para Niños". Acompaño a niños, niñas y adolescentes a crear sitios web, apps y videojuegos de forma creativa y profesional.
-    </p>
-  </section>
-
-  <section data-aos="fade-up">
-    <h2>Contenido del programa</h2>
-    <div class="etapas">
-      <div class="caja">
-        <strong>Etapa 1</strong><br />
-        Herramientas y estructura web con HTML5.<br />
-        <em>Creará contenido y estructura en HTML.</em>
+  <main>
+    <section data-aos="fade-up">
+      <h2>Beneficios del programa</h2>
+      <div class="beneficios">
+        <article class="caja">💻 Desarrolla habilidades técnicas desde temprana edad</article>
+        <article class="caja">🎨 Expresa sus ideas de forma visual y funcional</article>
+        <article class="caja">🧠 Fomenta la lógica y resolución de problemas</article>
+        <article class="caja">🎯 Mejora su concentración y atención al detalle</article>
+        <article class="caja">🔍 Aborda retos complejos con estructura y claridad</article>
       </div>
-      <div class="caja">
-        <strong>Etapa 2</strong><br />
-        Diseño y estilos con CSS3.<br />
-        <em>Modificará colores, tamaños y fuentes.</em>
-      </div>
-      <div class="caja">
-        <strong>Etapa 3</strong><br />
-        Introducción a JavaScript.<br />
-        <em>Añadirá animaciones y funciones básicas.</em>
-      </div>
-      <div class="caja">
-        <strong>Etapa 4</strong><br />
-        Publicación del portafolio web.<br />
-        <em>Mostrando sus proyectos al mundo.</em>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section data-aos="fade-up">
-    <h2>¿Por qué clases en vivo y no grabadas?</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Las clases en vivo permiten adaptar el ritmo al estudiante, resolver dudas en tiempo real y fomentar el entusiasmo por aprender. A diferencia de los videos grabados, aquí cada niño avanza a su ritmo con tutoría directa.
-    </p>
-  </section>
+    <section data-aos="fade-up">
+      <h2>¿Quién imparte las clases?</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;">
+        Soy <strong>Frederick Corredor</strong>, desarrollador web FrontEnd. He creado este programa educativo para que niños y adolescentes aprendan a programar de forma práctica, divertida y personalizada.
+      </p>
+    </section>
 
-  <section class="cta" data-aos="zoom-in">
-    <h2>¡Agendemos una clase gratuita!</h2>
-    <p>Escríbeme por WhatsApp y te mostraré todo el programa en detalle.</p>
-    <a href="https://wa.me/573507687220" target="_blank">Hablar con Frederick</a>
-  </section>
+    <section>
+
+      <div class="etapas">
+        <h2>Contenido del programa</h2>
+        <article class="caja">
+          <strong>Etapa 1</strong><br />
+          Herramientas y estructura con HTML5<br />
+          <em>Creará contenido y estructura web</em>
+        </article>
+        <article class="caja">
+          <strong>Etapa 2</strong><br />
+          Estilos visuales con CSS3<br />
+          <em>Aplicará colores, fuentes y diseños</em>
+        </article>
+        <article class="caja">
+          <strong>Etapa 3</strong><br />
+          Introducción a JavaScript<br />
+          <em>Agregará interacciones y animaciones</em>
+        </article>
+        <article class="caja">
+          <strong>Etapa 4</strong><br />
+          Publicación de su sitio web<br />
+          <em>Mostrará sus proyectos al mundo</em>
+        </article>
+      </div>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>¿Por qué clases en vivo?</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;">
+        A diferencia de los cursos grabados, las clases en vivo se adaptan al ritmo de cada estudiante. Aquí resolverán dudas en tiempo real, recibirán atención personalizada y avanzarán con seguridad.
+      </p>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Testimonios</h2>
+      <div class="beneficios">
+        <article class="caja">"Mi hijo nunca había estado tan motivado con una clase virtual" <br><em>– Laura G.</em></article>
+        <article class="caja">"Ahora quiere ser desarrollador como Frederick" <br><em>– Diego R.</em></article>
+      </div>
+    </section>
+
+    <section class="cta" data-aos="zoom-in">
+      <h2>¡Agendemos una clase gratuita!</h2>
+      <p>Haz clic para contactarme y ver juntos el contenido del programa.</p>
+      <a href="https://wa.me/573507687220" target="_blank">Escríbeme por WhatsApp</a>
+    </section>
+  </main>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <script>
+    const cajas = document.querySelectorAll('.etapas .caja');
+    let animacionActiva = true;
+
+    function animarCajasScroll() {
+      let algunaActiva = false;
+      const scrollBottom = window.scrollY + window.innerHeight;
+
+      cajas.forEach(caja => {
+        const cajaTop = caja.offsetTop;
+        const distancia = scrollBottom - cajaTop;
+        const altoVentana = window.innerHeight * 0.20;
+
+        if (distancia > 0) {
+          const progreso = Math.min(distancia / altoVentana, 1);
+          const angle = (1 - progreso) * Math.PI / 2;
+          const radio = 100;
+          const translateX = Math.sin(angle) * radio;
+          const translateY = -Math.sin(angle) * radio;
+
+          caja.style.transform = `translate(${translateX}px, ${translateY}px)`;
+          caja.style.opacity = progreso;
+
+          if (progreso < 1) algunaActiva = true;
+        }
+      });
+
+      if (algunaActiva) {
+        requestAnimationFrame(animarCajasScroll);
+      } else {
+        animacionActiva = false;
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!animacionActiva) {
+        animacionActiva = true;
+        requestAnimationFrame(animarCajasScroll);
+      }
+    });
+
+    requestAnimationFrame(animarCajasScroll);
+  </script>
+
 </body>
 </html>
