@@ -110,6 +110,40 @@
 }
 
 
+.flexie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  h2{
+    margin-bottom: 24px;
+  }
+}
+
+.perfil{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  padding: 6px;
+    
+}
+
+.fotoperfil{
+  
+      border-radius: 50%;
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.342);
+      border: #531637 3px solid;
+   
+}
+
+
     @media (max-width: 600px) {
       .caja {
         flex: 1 1 100%;
@@ -120,6 +154,7 @@
         padding: 12px 20px;
       }
     }
+
   </style>
 </head>
 <body>
@@ -145,13 +180,18 @@
       </div>
     </section>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" class="flexie">
       <h2>¿Quién imparte las clases?</h2>
-      <p style="text-align:center; max-width:700px; margin:auto;">
+      <div class="perfil"style="width: 60%;">
+        
+      <p data-aos="fade-right">
         Soy <strong>Frederick Corredor</strong>, desarrollador web FrontEnd. He creado este programa educativo para que niños y adolescentes aprendan a programar de forma práctica, divertida y personalizada.
       </p>
+      </div>
+      
+        <img src="perfil.webp" alt="" class="fotoperfil" data-aos="fade-left">
+     
     </section>
-
     <section>
 
       <div class="etapas">
@@ -179,9 +219,9 @@
       </div>
     </section>
 
-    <section data-aos="fade-up">
-      <h2>¿Por qué clases en vivo?</h2>
-      <p style="text-align:center; max-width:700px; margin:auto;">
+    <section >
+      <h2 data-aos="fade-up">¿Por qué clases en vivo?</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;" data-aos="fade-up">
         A diferencia de los cursos grabados, las clases en vivo se adaptan al ritmo de cada estudiante. Aquí resolverán dudas en tiempo real, recibirán atención personalizada y avanzarán con seguridad.
       </p>
     </section>
